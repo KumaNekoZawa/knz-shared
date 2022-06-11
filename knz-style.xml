@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+
+    <!-- no HEADERS -->
+
+    <!-- no JAVADOC COMMENTS -->
+
+    <!-- MISCELLANEOUS -->
+    <module name="NewlineAtEndOfFile" />
+    <!-- no OrderedProperties -->
+    <!-- no Translation -->
+    <module name="UniqueProperties" />
+
+    <!-- REGEXP -->
+    <module name="RegexpSingleline">
+        <property name="format" value="\s+$" />
+        <property name="message" value="Line ends in whitespace" />
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="JOptionPane" />
+        <property name="message" value="Line contains JOptionPane" />
+        <property name="severity" value="warning" />
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="AssertionError" />
+        <property name="message" value="Line contains AssertionError" />
+        <property name="severity" value="info" />
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="printStackTrace" />
+        <property name="message" value="Line contains printStackTrace" />
+        <property name="severity" value="warning" />
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="System\.err" />
+        <property name="message" value="Line contains System.err" />
+        <property name="severity" value="warning" />
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format" value="System\.out" />
+        <property name="message" value="Line contains System.out" />
+        <property name="severity" value="error" />
+    </module>
+    <!-- XXX add more here if needed -->
+
+    <!-- no SIZE VIOLATIONS -->
+
+    <!-- WHITESPACE -->
+    <module name="FileTabCharacter" />
+
+    <module name="TreeWalker">
+
+        <!-- no ANNOTATIONS -->
+
+        <!-- BLOCK CHECKS -->
+        <!-- no AvoidNestedBlocks -->
+        <!-- no EmptyBlock -->
+        <module name="EmptyCatchBlock" />
+        <module name="LeftCurly">
+            <property name="option" value="eol" />
+            <property name="ignoreEnums" value="false" />
+        </module>
+        <module name="NeedBraces">
+            <property name="allowSingleLineStatement" value="false" />
+            <property name="allowEmptyLoopBody" value="true" />
+        </module>
+        <module name="RightCurly" />
+
+        <!-- CLASS DESIGN -->
+        <!-- no DesignForExtension -->
+        <!-- no FinalClass -->
+        <module name="HideUtilityClassConstructor" />
+        <!-- no InnerTypeLast -->
+        <module name="InterfaceIsType" />
+        <module name="MutableException" />
+        <module name="OneTopLevelClass" />
+        <!-- no ThrowsCount -->
+        <module name="VisibilityModifier">
+            <property name="packageAllowed" value="false" />
+            <property name="protectedAllowed" value="true" />
+        </module>
+
+        <!-- CODING -->
+        <module name="ArrayTrailingComma">
+            <property name="alwaysDemandTrailingComma" value="false" />
+        </module>
+        <module name="AvoidDoubleBraceInitialization" />
+        <!-- no AvoidInlineConditionals -->
+        <!-- no AvoidNoArgumentSuperConstructorCall -->
+        <!-- no CovariantEquals -->
+        <module name="DeclarationOrder">
+            <property name="ignoreModifiers" value="true" />
+        </module>
+        <module name="DefaultComesLast" />
+        <module name="EmptyStatement" />
+        <!-- no EqualsAvoidNull -->
+        <!-- no EqualsHashCode -->
+        <!-- no ExplicitInitialization -->
+        <module name="FallThrough">
+            <property name="checkLastCaseGroup" value="true" />
+        </module>
+        <module name="FinalLocalVariable">
+            <property name="validateEnhancedForLoopVariable" value="true" />
+        </module>
+        <module name="HiddenField">
+            <property name="ignoreConstructorParameter" value="true" />
+            <property name="ignoreSetter" value="true" />
+        </module>
+        <module name="IllegalCatch" />
+        <module name="IllegalInstantiation" />
+        <module name="IllegalThrows" />
+        <!-- no IllegalToken -->
+        <module name="IllegalTokenText">
+            <property name="format" value="(127|128|255|256)[Ll]?$" />
+            <property name="message" value="Illegal integer token" />
+            <property name="tokens" value="NUM_INT,NUM_LONG" />
+        </module>
+        <module name="IllegalTokenText">
+            <property name="format" value="\.0*[DFdf]?$" />
+            <property name="message" value="Illegal floating point token" />
+            <property name="tokens" value="NUM_DOUBLE,NUM_FLOAT" />
+        </module>
+        <!-- no IllegalType -->
+        <module name="InnerAssignment" />
+        <!-- no MagicNumber -->
+        <module name="MatchXpath">
+            <message key="matchxpath.match" value="Calling split() with only one argument." />
+            <property name="query" value="//METHOD_CALL[./DOT/IDENT[@text='split'] and count(./ELIST/EXPR/*) = 1]" />
+        </module>
+        <module name="MatchXpath">
+            <message key="matchxpath.match" value="Calling new Color() with only one argument." />
+            <property name="query" value="//LITERAL_NEW[./IDENT[@text='Color'] and count(./ELIST/EXPR/*) = 1]" />
+        </module>
+        <!-- XXX add more here if needed -->
+        <!-- no MissingCtor -->
+        <module name="MissingSwitchDefault" />
+        <!-- no ModifiedControlVariable -->
+        <!-- no MultipleStringLiterals -->
+        <!-- no MultipleVariableDeclarations -->
+        <!-- no NestedForDepth -->
+        <!-- no NestedIfDepth -->
+        <!-- no NestedTryDepth -->
+        <!-- no NoArrayTrailingComma -->
+        <module name="NoClone" />
+        <!-- no NoEnumTrailingComma -->
+        <module name="NoFinalizer" />
+        <module name="OneStatementPerLine" />
+        <module name="OverloadMethodsDeclarationOrder" />
+        <module name="PackageDeclaration" />
+        <module name="ParameterAssignment" />
+        <!-- no RequireThis -->
+        <!-- no ReturnCount -->
+        <module name="SimplifyBooleanExpression" />
+        <module name="SimplifyBooleanReturn" />
+        <module name="StringLiteralEquality" />
+        <module name="SuperClone" />
+        <module name="SuperFinalize" />
+        <!-- no UnnecessaryParentheses" -->
+        <module name="UnnecessarySemicolonAfterOuterTypeDeclaration" />
+        <module name="UnnecessarySemicolonAfterTypeMemberDeclaration" />
+        <module name="UnnecessarySemicolonInEnumeration" />
+        <module name="UnnecessarySemicolonInTryWithResources" />
+        <module name="UnusedLocalVariable" />
+        <!-- no VariableDeclarationUsageDistance -->
+
+        <!-- IMPORTS -->
+        <module name="AvoidStarImport" />
+        <module name="AvoidStaticImport" />
+        <module name="CustomImportOrder">
+            <property name="customImportOrderRules" value="STATIC###STANDARD_JAVA_PACKAGE###THIRD_PARTY_PACKAGE" />
+            <property name="separateLineBetweenGroups" value="true" />
+            <property name="sortImportsInGroupAlphabetically" value="true" />
+        </module>
+        <module name="IllegalImport" />
+        <!-- no ImportControl -->
+        <module name="ImportOrder">
+            <property name="option" value="bottom" />
+            <property name="groups" value="/javax?\./" />
+            <property name="ordered" value="true" />
+            <property name="separated" value="true" />
+            <property name="separatedStaticGroups" value="true" />
+            <property name="caseSensitive" value="true" />
+            <property name="sortStaticImportsAlphabetically" value="true" />
+        </module>
+        <module name="RedundantImport" />
+        <module name="UnusedImports" />
+
+        <!-- no JAVADOC COMMENTS -->
+
+        <!-- no METRICS -->
+
+        <!-- MISCELLANEOUS -->
+        <module name="ArrayTypeStyle">
+            <property name="javaStyle" value="true" />
+        </module>
+        <module name="AvoidEscapedUnicodeCharacters" />
+        <module name="CommentsIndentation" />
+        <!-- no DescendantToken -->
+        <!-- no FinalParameters -->
+        <!-- no Indentation -->
+        <module name="NoCodeInFile" />
+        <module name="OuterTypeFilename" />
+        <module name="TodoComment">
+            <property name="format" value="FIXME|TODO|XXX" />
+            <property name="severity" value="warning" />
+        </module>
+        <module name="TrailingComment" />
+        <!-- no UncommentedMain -->
+        <module name="UpperEll" />
+
+        <!-- MODIFIERS -->
+        <!-- no ClassMemberImpliedModifier -->
+        <!-- no InterfaceMemberImpliedModifier -->
+        <module name="ModifierOrder" />
+        <module name="RedundantModifier" />
+
+        <!-- NAMING CONVENTIONS -->
+        <!-- no AbbreviationAsWordInName -->
+        <module name="AbstractClassName" />
+        <module name="CatchParameterName">
+            <property name="format" value="^ex?$"/>
+        </module>
+        <module name="ClassTypeParameterName" />
+        <module name="ConstantName" />
+        <module name="IllegalIdentifierName" />
+        <module name="InterfaceTypeParameterName" />
+        <module name="LambdaParameterName" />
+        <module name="LocalFinalVariableName">
+            <property name="format" value="^[a-z][0-9A-Z_a-z]*$"/>
+        </module>
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][0-9A-Z_a-z]*$"/>
+        </module>
+        <module name="MemberName">
+            <property name="format" value="^[a-z][0-9A-Z_a-z]*$"/>
+        </module>
+        <module name="MethodName" />
+        <module name="MethodTypeParameterName" />
+        <module name="PackageName" />
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][0-9A-Z_a-z]*$"/>
+        </module>
+        <module name="PatternVariableName" />
+        <module name="RecordComponentName" />
+        <module name="RecordTypeParameterName" />
+        <module name="StaticVariableName" />
+        <module name="TypeName" />
+
+        <!-- no REGEXPS -->
+
+        <!-- no SIZE VIOLATIONS -->
+
+        <!-- WHITESPACE -->
+        <module name="EmptyForInitializerPad" />
+        <module name="EmptyForIteratorPad" />
+        <module name="EmptyLineSeparator">
+            <property name="allowNoEmptyLineBetweenFields" value="true" />
+            <property name="allowMultipleEmptyLines" value="false" />
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false" />
+        </module>
+        <module name="GenericWhitespace" />
+        <module name="MethodParamPad" />
+        <module name="NoLineWrap" />
+        <!-- no NoWhitespaceAfter -->
+        <!-- no NoWhitespaceBefore -->
+        <module name="NoWhitespaceBeforeCaseDefaultColon" />
+        <module name="OperatorWrap">
+            <property name="option" value="nl" />
+        </module>
+        <!-- no ParenPad -->
+        <module name="SeparatorWrap" />
+        <!-- no SingleSpaceSeparator -->
+        <module name="TypecastParenPad" />
+        <module name="WhitespaceAfter" />
+        <module name="WhitespaceAround" />
+
+    </module>
+
+</module>
