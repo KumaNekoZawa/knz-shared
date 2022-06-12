@@ -5,6 +5,11 @@
 
 <module name="Checker">
 
+    <module name="SeverityMatchFilter">
+        <property name="severity" value="info" />
+        <property name="acceptOnMatch" value="false" />
+    </module>
+
     <!-- no HEADERS -->
 
     <!-- no JAVADOC COMMENTS -->
@@ -23,7 +28,7 @@
     <module name="RegexpSingleline">
         <property name="format" value="JOptionPane" />
         <property name="message" value="Line contains JOptionPane" />
-        <property name="severity" value="warning" />
+        <property name="severity" value="error" />
     </module>
     <module name="RegexpSingleline">
         <property name="format" value="AssertionError" />
@@ -33,16 +38,16 @@
     <module name="RegexpSingleline">
         <property name="format" value="printStackTrace" />
         <property name="message" value="Line contains printStackTrace" />
-        <property name="severity" value="warning" />
+        <property name="severity" value="info" />
     </module>
     <module name="RegexpSingleline">
         <property name="format" value="System\.err" />
         <property name="message" value="Line contains System.err" />
-        <property name="severity" value="warning" />
+        <property name="severity" value="info" />
     </module>
     <module name="RegexpSingleline">
         <property name="format" value="System\.out" />
-        <property name="message" value="Line contains System.out" />
+        <property name="message" value="Line contains System.out; use System.err instead" />
         <property name="severity" value="error" />
     </module>
     <!-- XXX add more here if needed -->
@@ -205,8 +210,12 @@
         <module name="NoCodeInFile" />
         <module name="OuterTypeFilename" />
         <module name="TodoComment">
-            <property name="format" value="FIXME|TODO|XXX" />
+            <property name="format" value="FIXME|TODO" />
             <property name="severity" value="warning" />
+        </module>
+        <module name="TodoComment">
+            <property name="format" value="XXX" />
+            <property name="severity" value="info" />
         </module>
         <module name="TrailingComment" />
         <!-- no UncommentedMain -->
