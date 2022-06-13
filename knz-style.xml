@@ -140,6 +140,10 @@
             <message key="matchxpath.match" value="Calling new Color() with only one argument." />
             <property name="query" value="//LITERAL_NEW[./IDENT[@text='Color'] and count(./ELIST/EXPR/*) = 1]" />
         </module>
+        <module name="MatchXpath">
+            <message key="matchxpath.match" value="Calling new Color() with only three arguments." />
+            <property name="query" value="//LITERAL_NEW[./IDENT[@text='Color'] and count(./ELIST/EXPR/*) = 3]" />
+        </module>
         <!-- XXX add more here if needed -->
         <!-- no MissingCtor -->
         <module name="MissingSwitchDefault" />
